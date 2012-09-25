@@ -1,0 +1,27 @@
+extends index
+
+block content
+  #main
+    #header
+      h1#pagetitle whois
+      #queryinput
+        form(id="queryform")
+          span
+            input.textinput(type="text", name="query", value="google.com", required)
+          span
+            input.textinput(type="text", name="server", value="8.8.8.8")
+          select#typeselect(name="type")
+            option(value="A", selected) A
+            option(value="AAAA") AAAA
+            option(value="NS") NS
+            option(value="MX") MX
+            option(value="SOA") SOA
+            option(value="CNAME") CNAME
+            option(value="PTR") PTR
+            option(value="TXT") TXT
+            option(value="SRV") SRV
+          span
+            input.button(type="submit", value="lookup")
+    #queryoutput
+      #status
+    #lookuptime

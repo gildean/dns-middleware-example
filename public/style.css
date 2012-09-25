@@ -1,0 +1,118 @@
+@font-face {
+	font-family: Perspective;
+	src: url('persans.ttf');
+}
+
+@font-face {
+	font-family: Perspective;
+	font-weight: bold;
+	src: url('persansb.ttf');
+}
+
+@font-face {
+	font-family: Perspective;
+	font-style: italic;
+	src: url('persansi.ttf');
+}
+
+* {
+	font: 102.5% Perspective, "DroidSans", "Calibri", sans-serif;
+}
+
+body, html, #main {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 100%;
+	width: 100vw;
+}
+
+#pagetitle {
+	position: absolute;
+	right: 5px;
+	top: 0;
+	color: #00EEEE;
+	font-size: 200%;
+	opacity: 0.5;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	z-index: 200;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #0e0e0e;
+	color: #FCFCFC;
+	border: 1px solid black;
+	box-shadow: 0 2px 2px rgba(0,0,0,0.4);
+	z-index: 100;
+}
+
+.textinput {
+	width: 25%;
+	margin: 0 2px;
+}
+
+#queryinput {
+	position: relative;
+	left: 0;
+	top: 0;
+	z-index: 300;
+}
+
+#queryoutput {
+	margin: 50px auto;
+	width: 75%;
+	min-width: 250px;
+}
+
+.resultbox {
+	border-radius: 8px;
+	border: 1px solid #EBECE4;
+	padding: 10px;
+	margin: 2px 0;
+}
+
+#typeselect {
+	width: 90px;
+	color: #0e0e0e;
+}
+
+.button {
+	border: 0;
+	border-radius: 0.5em;
+	background: #00CDCD;
+	color: #FFF;
+	text-shadow: -1px 1px 0 rgba(0,0,0,0.4);
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	width: 10%;
+	min-width: 60px;
+	margin: 0 4px;
+}
+
+.button:hover {
+	background: #00FFFF;
+}
+
+#lookuptime {
+	position: fixed;
+	bottom: 0;
+	right: 10px;
+	color: #262626;
+}
+
+@media only screen
+and (max-width : 767px) {
+
+#header {
+	position: relative;
+	min-width: 250px;
+}
+}
