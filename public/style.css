@@ -1,22 +1,5 @@
-@font-face {
-	font-family: Perspective;
-	src: url('persans.ttf');
-}
-
-@font-face {
-	font-family: Perspective;
-	font-weight: bold;
-	src: url('persansb.ttf');
-}
-
-@font-face {
-	font-family: Perspective;
-	font-style: italic;
-	src: url('persansi.ttf');
-}
-
 * {
-	font: 102.5% Perspective, "DroidSans", "Calibri", sans-serif;
+	font: 105% Helvetica, DroidSans, Calibri, sans-serif;
 }
 
 body, html, #main {
@@ -25,6 +8,7 @@ body, html, #main {
 	border: 0;
 	width: 100%;
 	width: 100vw;
+	color: #0e0e0e;
 }
 
 #pagetitle {
@@ -50,6 +34,9 @@ body, html, #main {
 	border: 1px solid black;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.4);
 	z-index: 100;
+	height: 45px;
+	font-size: 1.1em;
+	padding: 5px 0 0 0;
 }
 
 .textinput {
@@ -65,7 +52,7 @@ body, html, #main {
 }
 
 #queryoutput {
-	margin: 50px auto;
+	margin: 60px auto;
 	width: 75%;
 	min-width: 250px;
 }
