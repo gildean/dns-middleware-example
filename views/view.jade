@@ -7,10 +7,10 @@ block content
       #queryinput
         form(id="queryform")
           span
-            input.textinput(type="text", name="query", value="google.com", required)
+            input.textinput.inputelement(type="text", name="query", value="google.com", required)
           span
-            input.textinput(type="text", name="server", value="8.8.8.8")
-          select#typeselect(name="type")
+            input.textinput.inputelement(type="text", name="server", value="8.8.8.8")
+          select#typeselect.inputelement(name="type")
             option(value="A", selected) A
             option(value="AAAA") AAAA
             option(value="NS") NS
@@ -22,6 +22,7 @@ block content
             option(value="SRV") SRV
           span
             input.button(type="submit", value="lookup")
+      #help hover inputs for help
+    #status
     #queryoutput
-      #status
     #lookuptime

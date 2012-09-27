@@ -18,7 +18,7 @@ app.post('/*', whois, function (req, res) {
 });
 
 app.use(function(req, res, next){
-    res.send(420, 'Slow down bro.');
+    res.send(418, 'No java here.');
 });
  
 server.listen(3009);
