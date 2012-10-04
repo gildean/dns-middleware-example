@@ -1,6 +1,6 @@
 {
   "name": "dns-middleware-example",
-  "version": "0.1.1-5",
+  "version": "0.1.3-12",
   "description": "DNS-lookup middleware example for connect/express",
   "homepage": "https://github.com/gildean/dns-middleware-example",
   "keywords": [
