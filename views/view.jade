@@ -4,6 +4,8 @@ block content
   #main
     #header
       h1#pagetitle whois
+        span#tooltip.tooltip.backlink
+          a(href="http://julkinen.salaliitto.com") by: ok 2012
       #queryinput
         form(id="queryform")
           span
@@ -22,7 +24,7 @@ block content
             option(value="SRV") SRV
           span
             input.button(type="submit", value="lookup")
-      #help hover inputs for help
-    #status
+      #help
+        span#helper hover inputs for help
     #queryoutput
     #lookuptime

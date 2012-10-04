@@ -2,7 +2,8 @@ var express = require("express"),
     http = require('http'),
     whois = require('dns-middleware'),
     app = express(),
-    server = http.createServer(app);
+    server = http.createServer(app),
+    port = 9003; 
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.bodyParser());
@@ -21,4 +22,4 @@ app.use(function(req, res, next){
     res.send(418, 'No java here.');
 });
  
-server.listen(3009);
+server.listen(port);

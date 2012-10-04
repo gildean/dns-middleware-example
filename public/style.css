@@ -1,5 +1,6 @@
 * {
 	font: 105% Helvetica, DroidSans, Calibri, sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 
 body, html, #main {
@@ -7,7 +8,6 @@ body, html, #main {
 	padding: 0;
 	border: 0;
 	width: 100%;
-	width: 100vw;
 	color: #0e0e0e;
 }
 
@@ -15,13 +15,70 @@ body, html, #main {
 	position: absolute;
 	right: 5px;
 	top: 0;
-	color: #00EEEE;
+	color: rgba(0,238,238,0.8);
 	font-size: 200%;
-	opacity: 0.5;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	z-index: 200;
+	transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+}
+
+#pagetitle:hover {
+	color: rgba(0,238,238,1);
+	text-shadow: 0 0  5px rgba(0, 238, 238, 0.4);
+	cursor: crosshair;
+}
+
+span.tooltip {
+    position: absolute;
+    top: 50px;
+    left: -40px;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 2px 2px 3px 0px;
+	transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+}
+
+span.tooltip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent transparent #FFFFFF transparent;
+      top: -50%;
+      left: 70%;
+}
+
+h1 > .tooltip {
+	opacity: 0;
+	visibility: hidden;
+}
+
+h1:hover > .tooltip {
+	opacity: 1;
+	visibility: visible;
+}
+
+.backlink a{
+	text-decoration: none;
+	color: #00EEEE;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
 }
 
 #header {
@@ -31,17 +88,18 @@ body, html, #main {
 	width: 100%;
 	background: #0e0e0e;
 	color: #FCFCFC;
-	border: 1px solid black;
+	border-bottom: 1px solid black;
 	box-shadow: 0 2px 2px rgba(0,0,0,0.4);
 	z-index: 100;
 	height: 45px;
 	font-size: 1.1em;
-	padding: 5px 0 0 0;
+	padding: 8px 0 0 0;
 }
 
 .textinput {
 	width: 25%;
-	margin: 0 2px;
+	margin: 0 2px 0 6px;
+	height: 1.2em;
 }
 
 .inputelement {
@@ -53,25 +111,25 @@ body, html, #main {
 	left: 0;
 	top: 0;
 	z-index: 300;
+	color: #0e0e0e;
+	display: inline-block;
+	width: 90%;
 }
 
-#status {
-	margin: 60px 0 0 10%;
-}
 
 #help {
 	width: 100%;
+	height: 30px;
 	text-align: center;
-	margin: 10px 0 0;
-	padding: 10px 0;
+	margin: 9px 0 0;
+	padding: 5px 0;
 	background: #00CDCD;
 	color: #FFF;
 	text-shadow: -1px 1px 0 rgba(0,0,0,0.4);
-
 }
 
 #queryoutput {
-	margin: 10px auto;
+	margin: 140px auto 40px;
 	width: 75%;
 	min-width: 250px;
 }
@@ -79,14 +137,28 @@ body, html, #main {
 .resultbox {
 	border-radius: 8px;
 	border: 1px solid #EBECE4;
-	padding: 10px;
-	margin: 2px 0;
-	display: none;
+	padding: 5px 10px;
+	margin: 4px 0;
 }
 
 #typeselect {
-	width: 90px;
-	color: #0e0e0e;
+	width: 110px;
+	height: 1.4em;
+	margin: 0 6px;
+}
+
+.key {
+	color: #999999;
+	display: inline-block;
+	width: 48%;
+	margin: 0 1%;
+	text-align: right;
+}
+
+.value {
+	width: 50%;
+	text-align: left;
+	display: inline-block;
 }
 
 .button {
@@ -99,9 +171,9 @@ body, html, #main {
 	-o-transition: all 0.3s ease-in-out;
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
-	width: 12%;
+	width: 20%;
 	min-width: 60px;
-	margin: 0 4px;
+	margin: 0 3%;
 }
 
 .button:hover {
@@ -114,6 +186,29 @@ body, html, #main {
 	right: 10px;
 	color: #262626;
 }
+
+
+@media only screen
+and (max-width : 1279px)
+and (min-width : 768px) {
+
+
+.value {
+	width: auto;
+}
+
+.key {
+	width: 25%;
+}
+
+#queryoutput {
+	width: 98%;
+	margin: 80px auto 30px;
+}
+
+}
+
+
 
 @media only screen
 and (max-width : 767px) {
@@ -134,13 +229,30 @@ and (max-width : 767px) {
 }
 
 .button {
-	width: 25%;
-	margin: 5px;
+	width: 46%;
+	margin: 10px 0 0 5px;
 }
 
 .textinput {
-	width: 33%;
-	margin: 0 2px;
+	width: 46%;
+	margin: 0 1%;
+}
+
+#typeselect {
+	width: 23%;
+}
+
+.value {
+	width: auto;
+}
+
+.key {
+	width: 25%;
+}
+
+#queryoutput {
+	width: 98%;
+	margin: 50px auto 30px;
 }
 
 }
